@@ -12,8 +12,8 @@
 // No direct access
 defined('_JEXEC') or die;
 
-// Include the syndicate functions only once
-require_once dirname(__FILE__) . '/helper.php';
+// Load the helper file (only once)
+require_once dirname(__FILE__) . DS . 'helper.php';
 
 /**
   * This retrieves the lang parameter we stored earlier. Note the second part
