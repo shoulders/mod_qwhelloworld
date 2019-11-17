@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.0" client="site" method="upgrade">
+	
+	<!-- Meta Data -->
+	<name>MOD_HELLOWORLD_NAME</name>
+	<creationDate>2019-11-01</creationDate>
+	<author>QuantumWarp</author>	
+	<authorEmail>no-reply@quantumwarp.com</authorEmail>
+	<authorUrl>quantumwarp.com</authorUrl>
+	<copyright>Copyright (C) 2019 QuantumWarp. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<version>1.0.0</version>
+	<description>MOD_HELLOWORLD_DESCRIPTION</description>	
+	<namespace>QuantumWarp\Module\mod_helloworld</namespace><!-- Joomla 4.0 only -->
+	<element>HelloWorldaa</element><!-- the internal name of the component. If omitted, name will be cleaned and used - I am not sure this is used anymore -->	
+	<infourl>https://www.extly.com/docs/autotweetng_joocial</infourl> <!-- might be only for update server -->
+	<changelogurl>https://quantumwarp.com/updates/mod_helloworld/changelog.xml</changelogurl> <!-- Joomla 4.0 only -->	
+	<dlid prefix="dlid=" suffix="&amp;dummy=my.zip"/>  <!-- Joomla 4.0 only -->	
+	<!--<help key="JHELP_EXTENSIONS_MODULE_MANAGER_SEARCH" />--> <!-- This create a help button to Joomla Official documentation - https://help.joomla.org/proxy?keyref=Help39:Extensions_Module_Manager_Search&lang=en -->
+	
+	<!-- install/update/uninstall Script -->
+	<scriptfile>script.php</scriptfile> 
+	
+	<!-- Front-end Files -->	
+	<files>
+		<folder>language</folder><!-- Languages (New Method) -->
+		<folder>sql</folder>
+		<folder>language</folder>
+		<filename>mod_helloworld.xml</filename>
+		<filename module="mod_helloworld">mod_helloworld.php</filename>
+		<filename>index.html</filename>
+		<filename>helper.php</filename>
+		<filename>tmpl/default.php</filename>
+		<filename>tmpl/index.html</filename>
+	</files>
+	<files folder="from-folder">
+		<filename>example.php</filename>
+		<folder>examples</folder>
+	</files>
+	
+	<!-- Fileset definition - not sure what this is for -->
+	<fileset></fileset>
+	
+	<!-- Media Files -->
+	<media folder="media" destination="com_helloworld">
+		<filename>mod_helloworld_logo.png</filename>
+		<folder>css</folder>
+		<folder>js</folder>
+	</media>
+		
+	<!-- Languages (Old Method - Might not be needed) -->
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.mod_helloworld.ini</language>
+		<language tag="en-GB">en-GB/en-GB.mod_helloworld.sys.ini</language>
+	</languages>
+	
+	<!-- Configuration -->
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field
+					name="lang"
+					type="sql"
+					default="1"
+					label="MOD_HELLOWORLD_SELECT_LANGUAGE"
+					query="SELECT id AS value, lang FROM #__helloworld"
+				/>
+			</fieldset>
+			<fieldset name="advanced">
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC"
+				/>
+
+				<field
+					name="moduleclass_sfx"
+					type="textarea"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC"
+					rows="3"
+				/>
+
+				<field
+					name="cache"
+					type="list"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC"
+					default="1"
+					>
+					<option value="1">JGLOBAL_USE_GLOBAL</option>
+					<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+
+				<field
+					name="cache_time"
+					type="text"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC"
+					default="900"
+				/>
+
+				<field
+					name="cachemode"
+					type="hidden"
+					default="static"
+				/>
+			</fieldset>
+		</fields>
+	</config>
+	
+	<!-- Install and Upgrade -->
+	<install>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/mysql/install.mysql.utf8.sql</file>
+			<file driver="sqlazure" charset="utf8">sql/sqlazure/install.sqlazure.utf8.sql</file>			 
+		</sql>
+	</install>	 
+	<uninstall>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/mysql/uninstall.mysql.utf8.sql</file>
+			<file driver="sqlazure" charset="utf8">sql/sqlazure/uninstall.sqlazure.utf8.sql</file>		 
+		</sql>
+	</uninstall>	 
+	<update> 
+		<schemas>
+			<schemapath type="mysql">sql/mysql/updates</schemapath>
+			<schemapath type="sqlazure">sql/sqlazure/updates</schemapath>
+		</schemas> 
+	</update>	
+		
+	<!-- Update Server -->		
+	<updateservers>
+		<server type="extension" priority="1" name="Helloworld Update Site">https://quantumwarp.com/mod_helloworld/update.xml</server>
+	</updateservers>
+	
+</extension>
