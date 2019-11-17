@@ -132,7 +132,7 @@
 		
 	<!-- Update Server -->		
 	<updateservers>
-		<server type="extension" priority="1" name="Hello World Module - Update Site">https://quantumwarp.com/mod_helloworld/update.xml</server>
+		<server type="extension" priority="1" name="Hello World Module - Update Site">https://quantumwarp.com/updates/mod_helloworld/update.xml</server>
 	</updateservers>
 	
 </extension>
