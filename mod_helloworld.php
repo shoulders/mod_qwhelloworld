@@ -1,8 +1,8 @@
 <?php
 /*
- * HelloWorld! Module Entry Point
+ * HelloWorld Module Entry Point
  * 
- * @package   HelloWorld Module for Joomla! 3.x
+ * @package   HelloWorld Module for Joomla!
  * @author    Jon Brown https://quantumwarp.com/
  * @copyright Copyright (C) 2019 Jon Brown, All rights reserved.
  * @copyright Copyright (C) 2005 - 2019 Open Source Matters, Inc. All rights reserved.

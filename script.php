@@ -1,8 +1,14 @@
 <?php
-/*
- * @package   HelloWorld Module for Joomla! 3.x
+// No direct access to this file
+defined('_JEXEC') or die('Restricted access');
+
+/**
+ * Script file of HelloWorld Module.
+ *
+ * @package   Hello World Module for Joomla!
  * @author    Jon Brown https://quantumwarp.com/
  * @copyright Copyright (C) 2019 Jon Brown, All rights reserved.
+ * @copyright Copyright (C) 2005 - 2018 Open Source Matters, Inc. All rights reserved.
  * @license   GNU/GPLv3 or later; https://www.gnu.org/licenses/gpl.html
  */
 
@@ -12,63 +18,75 @@ defined('_JEXEC') or die;
 /**
  * Script file of HelloWorld module
  */
-class mod_helloWorldInstallerScript
+class ModHelloworldInstallerScript
 {
 	/**
-	 * Method to install the extension
-	 * $parent is the class calling this method
-	 *
-	 * @return void
-	 */
+     * This method is called after a module is installed.
+     *
+     * @param  \stdClass $parent - Parent object calling this method.
+     *
+     * @return void
+     */
 	function install($parent) 
 	{
-		echo '<p>The module has been installed</p>';
+		echo '<p>' . JText::_('MOD_HELLOWORLD_INSTALL_TEXT') . '</p>';
+		//$parent->getParent()->setRedirectURL('index.php?option=mod_helloworld');
 	}
  
 	/**
-	 * Method to uninstall the extension
-	 * $parent is the class calling this method
-	 *
-	 * @return void
-	 */
+     * This method is called after a module is uninstalled.
+     *
+     * @param  \stdClass $parent - Parent object calling this method.
+     *
+     * @return void
+     */
 	function uninstall($parent) 
 	{
-		echo '<p>The module has been uninstalled</p>';
+		echo '<p>' . JText::_('MOD_HELLOWORLD_UNINSTALL_TEXT') . '</p>';
 	}
  
 	/**
-	 * Method to update the extension
-	 * $parent is the class calling this method
-	 *
-	 * @return void
-	 */
+     * This method is called after a module is updated.
+     *
+     * @param  \stdClass $parent - Parent object calling object.
+     *
+     * @return void
+     */
 	function update($parent) 
-	{
-		echo '<p>The module has been <strong>updated</strong> to v' . $parent->get('manifest')->version;
-		// $parent->getParent()->setRedirectURL('index.php?option=com_modules'); // You can also redirect to a page of your choice with 
+	{		
+		echo '<p>' . JText::sprintf('MOD_HELLOWORLD_UPDATE_TEXT', $parent->get('manifest')->version) . '</p>';
 	}
  
 	/**
-	 * Method to run before an install/update/uninstall method
-	 * $parent is the class calling this method
-	 * $type is the type of change (install, update or discover_install)
-	 *
-	 * @return void
-	 */
+     * Runs just before any installation action is performed on the module. (install/update/uninstall method)
+     * Verifications and pre-requisites should run in this function.
+     *
+     * @param  string    $type   - Type of PreFlight action. Possible values are:
+     *                           - * install
+     *                           - * update
+     *                           - * discover_install
+     * @param  \stdClass $parent - Parent object calling object.
+     *
+     * @return void
+     */
 	function preflight($type, $parent) 
 	{
-		echo '<p>Anything here happens <strong>before</strong> the installation/update/uninstallation of the module</p>';
+		echo '<p>' . JText::_('MOD_HELLOWORLD_PREFLIGHT_' . $type . '_TEXT') . '</p>';
 	}
  
 	/**
-	 * Method to run after an install/update/uninstall method
-	 * $parent is the class calling this method
-	 * $type is the type of change (install, update or discover_install)
-	 *
-	 * @return void
-	 */
+     * Runs right after any installation action is performed on the module. (install/update/uninstall method)
+     *
+     * @param  string    $type   - Type of PostFlight action. Possible values are:
+     *                           - * install
+     *                           - * update
+     *                           - * discover_install
+     * @param  \stdClass $parent - Parent object calling object.
+     *
+     * @return void
+     */
 	function postflight($type, $parent) 
 	{
-		echo '<p>Anything here happens <strong>after</strong> the installation/update/uninstallation of the module</p>';
+		echo '<p>' . JText::_('MOD_HELLOWORLD_POSTFLIGHT_' . $type . '_TEXT') . '</p>';
 	}
 }

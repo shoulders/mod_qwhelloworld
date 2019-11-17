@@ -1,8 +1,8 @@
 <?php
 /*
- * Helper class for Hello World! module
+ * Helper class for HelloWorld module
  * 
- * @package   HelloWorld Module for Joomla! 3.x
+ * @package   HelloWorld Module for Joomla!
  * @link https://docs.joomla.org/J3.x:Creating_a_simple_module/Developing_a_Basic_Module
  * @author    Jon Brown https://quantumwarp.com/
  * @copyright Copyright (C) 2019 Jon Brown, All rights reserved.
@@ -27,7 +27,7 @@ class modHelloWorldHelper
 		// Retrieve the shout - note we are now retrieving the id not the lang field.
 		$query = $db->getQuery(true)
 					->select($db->quoteName('hello'))
-					->from($db->quoteName('#__helloworld'))
+					->from($db->quoteName('#__mod_helloworld'))
 					->where('id = '. $db->Quote($params));
 		
 		// Prepare the query

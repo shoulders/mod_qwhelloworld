@@ -1,1 +1,1 @@
-DROP TABLE IF EXISTS `#__helloworld`
+DROP TABLE IF EXISTS `#__mod_helloworld`
