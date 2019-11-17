@@ -18,7 +18,7 @@ defined('_JEXEC') or die;
 /**
  * Script file of HelloWorld module
  */
-class ModHelloworldInstallerScript
+class mod_helloWorldInstallerScript
 {
 	/**
      * This method is called after a module is installed.
