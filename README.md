@@ -1,5 +1,4 @@
 # Hello World Module for Joomla
-=========
 
 This is a ready to go Joomla module template that you can use to build your own modules. I have added all the settings, elements and things I could find.
 
