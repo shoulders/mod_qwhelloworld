@@ -1,1 +1,1 @@
-# Placeholder file for database changes for version 1.0.0
+# Placeholder file to set the extension database schema version
