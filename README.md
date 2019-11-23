@@ -7,7 +7,7 @@ This is a module that displays a language sensitive Hello World statement. You c
 
 ## How to use this plugin
 - Install the module.
-- Configure the module how you want it, including making sure it is published and enabled on a page of your choosing.
+- Configure the module how you want it, including making sure to publish it and enabling it on a page of your choosing.
 - Load the page that has the module configured to display on it.
 - You will now see a Hello World message displayed in your chosen language.
 
