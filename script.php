@@ -1,11 +1,8 @@
 <?php
 /**
- * Script file of HelloWorld Module.
- *
  * @package   Hello World Module for Joomla!
  * @author    Jon Brown https://quantumwarp.com/
  * @copyright Copyright (C) 2019 Jon Brown, All rights reserved.
- * @copyright Copyright (C) 2005 - 2018 Open Source Matters, Inc. All rights reserved.
  * @license   GNU/GPLv3 or later; https://www.gnu.org/licenses/gpl.html
  */
 

@@ -1,11 +1,8 @@
 <?php
-/*
- * HelloWorld Module Entry Point
- * 
+/**
  * @package   Hello World Module for Joomla!
  * @author    Jon Brown https://quantumwarp.com/
  * @copyright Copyright (C) 2019 Jon Brown, All rights reserved.
- * @copyright Copyright (C) 2005 - 2019 Open Source Matters, Inc. All rights reserved.
  * @license   GNU/GPLv3 or later; https://www.gnu.org/licenses/gpl.html
  */
  
@@ -13,8 +10,8 @@
 defined('_JEXEC') or die;
 
 // Load the helper file (only once)
-// require_once dirname(__FILE__) . '/helper.php'; // works - An older way of doing things
-JLoader::register('ModHelloWorldHelper', __DIR__ . '/helper.php'); // better - This uses the Joomla autoload feature
+// require_once dirname(__FILE__) . '/helper.php'; // Works - An older way of doing things
+JLoader::register('ModHelloWorldHelper', __DIR__ . '/helper.php'); // Better - This uses the Joomla autoload feature
 
 /**
   * This retrieves the lang parameter we stored earlier. Note the second part
@@ -33,8 +30,8 @@ $messageStyling = $params->get('underlineMessage') ? 'text-decoration: underline
 $moduleclass_sfx = htmlspecialchars($params->get('moduleclass_sfx'), ENT_COMPAT, 'UTF-8');
 
 // Add CSS and JS to the <head> - This method allows overriding
-JHtml::stylesheet('mod_helloworld/helloworld.css', array(), true);
-JHtml::script('mod_helloworld/helloworld.js', false, true);
+JHtml::stylesheet('mod_'.$module->name.'/helloworld.css', array(), true);
+JHtml::script('mod_'.$module->name.'/helloworld.js', false, true);
 
 // Load and display the template
 require JModuleHelper::getLayoutPath('mod_'.$module->name, $params->get('layout', 'default'));
