@@ -153,7 +153,7 @@
 		
 	<!-- Update Server -->		
 	<updateservers>
-		<server type="extension" priority="1" name="Hello World Module - Update Site">https://quantumwarp.com/updates/joomla/mod_helloworld/update.xml</server>
+		<server type="extension" priority="1" name="mod_helloworld (Module)">https://quantumwarp.com/updates/joomla/mod_helloworld/update.xml</server>
 	</updateservers>
 	
 </extension>

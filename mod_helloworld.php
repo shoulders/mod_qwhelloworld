@@ -11,7 +11,9 @@ defined('_JEXEC') or die;
 
 // Load the helper file (only once)
 // require_once dirname(__FILE__) . '/helper.php'; // Works - An older way of doing things
-JLoader::register('ModHelloWorldHelper', __DIR__ . '/helper.php'); // Better - This uses the Joomla autoload feature
+
+// Load the helper file via Joomla's Autoload feature
+JLoader::register('ModHelloWorldHelper', __DIR__ . '/helper.php');
 
 /**
   * This retrieves the lang parameter we stored earlier. Note the second part
@@ -30,6 +32,8 @@ $messageStyling = $params->get('underlineMessage') ? 'text-decoration: underline
 $moduleclass_sfx = htmlspecialchars($params->get('moduleclass_sfx'), ENT_COMPAT, 'UTF-8');
 
 // Add CSS and JS to the <head> - This method allows overriding
+JHtml::stylesheet('mod_'.$module->name.'/style.css', array(), true);
+JHtml::script('mod_'.$module->name.'/javascript.js', false, true);
 JHtml::stylesheet('mod_'.$module->name.'/helloworld.css', array(), true);
 JHtml::script('mod_'.$module->name.'/helloworld.js', false, true);
 

@@ -24,7 +24,7 @@ mod_helloworld is fully compatible with Joomla versions 3.x (possibly only 3.8+)
 mod_helloworld is a Joomla module developed by QuantumWarp and released under the GNU General Public License.
 
 ## Learn More
-Visit the extension's software page at: https://quantumwarp.com/
+Visit the extension's software page at: https://quantumwarp.com/projects/joomla/mod-helloworld
 
 ## References
 I used the following links and resources to build this module.

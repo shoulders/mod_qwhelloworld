@@ -10,9 +10,9 @@
 defined('_JEXEC') or die;
  
 /**
- * class name of: mod_helloWorldInstallerScript (original), mod_HelloWorldInstallerScript, Mod_HelloWorldInstallerScript = All work
+ * class name of: mod_helloWorldInstallerScript (original), mod_HelloWorldInstallerScript, Mod_HelloWorldInstallerScript,  ModHelloWorldInstallerScript = All work
  */
-class mod_helloWorldInstallerScript
+class ModHelloWorldInstallerScript
 {
 	/**
 	 * This method is called after a module is installed.
